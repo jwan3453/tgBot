@@ -15,17 +15,20 @@ app.post('/webhook-endpoint', (req, res) => {
 });
 
 app.get("/", (req, res) => res.type('html').send(html));
+
+
+const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
  
-// 读取 SSL 证书和密钥
-const options = {
-  key: fs.readFileSync(path.join(__dirname, 'key.pem')),
-  cert: fs.readFileSync(path.join(__dirname, 'cert.pem'))
-};
+// // 读取 SSL 证书和密钥
+// const options = {
+//   key: fs.readFileSync(path.join(__dirname, 'key.pem')),
+//   cert: fs.readFileSync(path.join(__dirname, 'cert.pem'))
+// };
  
-// 创建 HTTPS 服务器
-const server = https.createServer(options, app).listen(PORT, () => {
-  console.log(`HTTPS server is running on port ${PORT}`);
-});
+// // 创建 HTTPS 服务器
+// const server = https.createServer(options, app).listen(PORT, () => {
+//   console.log(`HTTPS server is running on port ${PORT}`);
+// });
 
 server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
