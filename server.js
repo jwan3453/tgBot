@@ -4,7 +4,7 @@ const https = require('https');
 const path = require('path');
  
 const app = express();
-const PORT = 443; // HTTPS 通常使用 443 端口
+const PORT = 80; // HTTPS 通常使用 443 端口
  
 // 设置 Express 应用来处理 POST 请求
 app.use(express.json());
