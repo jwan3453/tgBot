@@ -78,4 +78,4 @@ const html = `
       Hello from Render!
     </section>
   </body>
-</html>
+</html>`
