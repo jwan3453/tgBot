@@ -4,7 +4,7 @@ const https = require('https');
 const path = require('path');
  
 const app = express();
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
  
 // 设置 Express 应用来处理 POST 请求
 app.use(express.json());
